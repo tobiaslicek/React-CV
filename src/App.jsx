@@ -1,11 +1,22 @@
 import React from 'react';
 
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import Header from './components/header';
-import WorkSection from './components/workSection';
+import Footer from './components/footer';
+import CvSection from './components/cvSection';
+
+const jobs = [
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/512/906/906343.png',
+    title: 'Frontend Developer – ABC s.r.o.',
+    period: '2023 / 01 – 2025 / 03',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/512/906/906175.png',
+    title: 'Web Designer – Freelance',
+    period: '2021 / 05 – 2022 / 12',
+  },
+];
 
 function App() {
   return React.createElement(
@@ -22,7 +33,27 @@ function App() {
         website: 'www.jannovak.cz',
         photoSrc: 'https://via.placeholder.com/120x120.png?text=Profil',
       }),
-      React.createElement(WorkSection),
+      React.createElement(
+        CvSection,
+        {
+          title: 'Pracovní zkušenosti',
+        },
+        jobs.map((experience) => {
+          return (
+            <li className="work-item">
+              <img
+                src={experience.icon}
+                className="work-item-icon"
+                alt="Ikona pozice"
+              />
+              <div className="work-item-content">
+                <span className="work-item-title">{experience.title}</span>
+                <span className="work-item-period">{experience.period}</span>
+              </div>
+            </li>
+          );
+        })
+      ),
       React.createElement(Footer),
     ]
   );
