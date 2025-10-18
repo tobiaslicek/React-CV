@@ -4,7 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  return React.createElement
+  return React.createElement (
+    'div', 
+    {
+      className: "cv"
+    }
+  )
 }
 
 export default App
