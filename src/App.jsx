@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import CvSection from './components/cvSection';
+import ExperienceItem from './components/experienceItem';
 
 const jobs = [
   {
@@ -40,17 +41,11 @@ function App() {
         },
         jobs.map((experience) => {
           return (
-            <li className="work-item">
-              <img
-                src={experience.icon}
-                className="work-item-icon"
-                alt="Ikona pozice"
-              />
-              <div className="work-item-content">
-                <span className="work-item-title">{experience.title}</span>
-                <span className="work-item-period">{experience.period}</span>
-              </div>
-            </li>
+            <ExperienceItem
+              title={experience.title}
+              icon={experience.icon}
+              period={experience.period}
+            />
           );
         })
       ),
