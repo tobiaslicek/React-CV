@@ -8,7 +8,8 @@ function App() {
     'div', 
     {
       className: "cv"
-    }
+    },
+    Header
   )
 }
 
