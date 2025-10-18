@@ -14,7 +14,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        LinkedIn
+        Github
       </a>
     </footer>
   );

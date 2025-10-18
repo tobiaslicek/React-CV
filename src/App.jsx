@@ -6,6 +6,8 @@ import Footer from './components/footer';
 import CvSection from './components/cvSection';
 import ExperienceItem from './components/experienceItem';
 
+const data = {};
+
 const jobs = [
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/906/906343.png',
@@ -17,6 +19,12 @@ const jobs = [
     title: 'Web Designer – Freelance',
     period: '2021 / 05 – 2022 / 12',
   },
+];
+
+const skills = [
+  'HTML, CSS, JavaScript',
+  'React – základní pojmy (komponenty)',
+  'Git, GitHub, VSCode',
 ];
 
 function App() {
@@ -47,6 +55,15 @@ function App() {
               period={experience.period}
             />
           );
+        })
+      ),
+      React.createElement(
+        CvSection,
+        {
+          title: 'Dovednosti',
+        },
+        skills.map((skill) => {
+          return <ExperienceItem title={skill} />;
         })
       ),
       React.createElement(Footer),
