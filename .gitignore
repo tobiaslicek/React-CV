@@ -1,24 +1,17 @@
-# OS / IDE
-.DS_Store
-Thumbs.db
-*.log
-
-# Node / package managers
+# Node
 node_modules/
-npm-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Build/Dev outputs
 dist/
 build/
-coverage/
 .vite/
 .parcel-cache/
 .next/
 .nuxt/
 .turbo/
 
-# Env a lokální data
+# System
+.DS_Store
+Thumbs.db
+
+# Env
 .env
 .env.*
