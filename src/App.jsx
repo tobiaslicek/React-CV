@@ -5,6 +5,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import Header from './components/header';
+import WorkSection from './components/workSection';
 
 function App() {
   return React.createElement(
@@ -21,6 +22,7 @@ function App() {
         website: 'www.jannovak.cz',
         photoSrc: 'https://via.placeholder.com/120x120.png?text=Profil',
       }),
+      React.createElement(WorkSection),
     ]
   );
 }
