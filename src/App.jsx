@@ -23,6 +23,7 @@ function App() {
         photoSrc: 'https://via.placeholder.com/120x120.png?text=Profil',
       }),
       React.createElement(WorkSection),
+      React.createElement(Footer),
     ]
   );
 }
