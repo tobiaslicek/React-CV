@@ -17,3 +17,5 @@ const Header = ({ name, contacts }) => {
     ]
   );
 };
+
+export default Header;
