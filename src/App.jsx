@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CvSection from './components/CvSection';
 import ExperienceItem from './components/ExperienceItem';
+import SkillItem from './components/SkillItem';
 
 const jobs = [
   {
@@ -28,8 +29,8 @@ function App() {
   return (
     <main className="cv">
       <Header
-        name="Jan Novák"
-        contacts="📧 jan.novak@example.com | ☎️ +420 777 888 999 | 🌐 www.jannovak.cz"
+        name="Tobiáš Licek"
+        contacts="📧 tobiaslicek@seznam.cz | ☎️ +420 732 633 936 | 🌐 www.tobiaslicek.cz"
       />
 
       <CvSection title="Pracovní zkušenosti">
@@ -45,7 +46,7 @@ function App() {
 
       <CvSection title="Dovednosti">
         {skills.map((skill, index) => (
-          <ExperienceItem key={index} title={skill} />
+          <SkillItem key={index} title={skill} />
         ))}
       </CvSection>
 

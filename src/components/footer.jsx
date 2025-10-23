@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="cv-footer">
       <a
-        src="https://github.com/jannovak"
+        href="https://github.com/tobiaslicek"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -10,11 +10,11 @@ const Footer = () => {
       </a>
       <span className="sep">|</span>
       <a
-        src="https://linkedin.com/in/jannovak"
+        href="https://www.linkedin.com/in/tobiaslicek"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Github
+        LinkedIn
       </a>
     </footer>
   );
