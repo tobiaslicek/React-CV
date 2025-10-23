@@ -1,0 +1,16 @@
+/* Footer s odkazy */
+.cv-footer {
+  border-top: 2px solid #ccc;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.cv-footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cv-footer a:hover {
+  text-decoration: underline;
+}
