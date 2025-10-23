@@ -1,0 +1,25 @@
+/* Header s medailonkem vpravo nahoře */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cv-name {
+  margin: 0;
+}
+
+.cv-contact {
+  margin: 4px 0 0;
+}
+
+.cv-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: none; /* fotka zůstává barevná */
+}
