@@ -1,21 +1,26 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CvSection from './components/CvSection';
-import ExperienceItem from './components/ExperienceItem';
-import SkillItem from './components/SkillItem';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import CvSection from './components/sections/cvSection';
+import ExperienceItem from './components/sections/experienceItem';
+import SkillItem from './components/sections/skillItem';
 
 const jobs = [
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/906/906343.png',
-    title: 'Frontend Developer – ABC s.r.o.',
-    period: '2023 / 01 – 2025 / 03',
+    title: 'Frontend Developer – VOATT',
+    period: '2024 / 05 – 2025 / 10',
   },
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/906/906175.png',
-    title: 'Web Designer – Freelance',
-    period: '2021 / 05 – 2022 / 12',
+    title: 'Frontend Developer – 7labs',
+    period: '2024 / 02 – 2024 / 06',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/512/906/906175.png',
+    title: 'Junior Fullstack Developer – Webmex s.r.o',
+    period: '2024 / 02 – 2024 / 06',
   },
 ];
 

@@ -1,3 +1,5 @@
+import "./sections.css"
+
 const CvSection = ({ title, children }) => {
   return (
     <section className="cv-section">
