@@ -1,12 +1,9 @@
 import React from 'react';
-
 import './App.css';
-import Header from './components/header';
-import Footer from './components/footer';
-import CvSection from './components/cvSection';
-import ExperienceItem from './components/experienceItem';
-
-const data = {};
+import Header from './components/Header';
+import Footer from './components/Footer';
+import CvSection from './components/CvSection';
+import ExperienceItem from './components/ExperienceItem';
 
 const jobs = [
   {
@@ -28,46 +25,32 @@ const skills = [
 ];
 
 function App() {
-  return React.createElement(
-    'main',
-    {
-      className: 'cv',
-    },
-    [
-      React.createElement(Header, {
-        key: 'header',
-        name: 'Jan Novák',
-        email: 'jan.novak@example.com',
-        phone: '+420 777 888 999',
-        website: 'www.jannovak.cz',
-        photoSrc: 'https://via.placeholder.com/120x120.png?text=Profil',
-      }),
-      React.createElement(
-        CvSection,
-        {
-          title: 'Pracovní zkušenosti',
-        },
-        jobs.map((experience) => {
-          return (
-            <ExperienceItem
-              title={experience.title}
-              icon={experience.icon}
-              period={experience.period}
-            />
-          );
-        })
-      ),
-      React.createElement(
-        CvSection,
-        {
-          title: 'Dovednosti',
-        },
-        skills.map((skill) => {
-          return <ExperienceItem title={skill} />;
-        })
-      ),
-      React.createElement(Footer),
-    ]
+  return (
+    <main className="cv">
+      <Header
+        name="Jan Novák"
+        contacts="📧 jan.novak@example.com | ☎️ +420 777 888 999 | 🌐 www.jannovak.cz"
+      />
+
+      <CvSection title="Pracovní zkušenosti">
+        {jobs.map((experience, index) => (
+          <ExperienceItem
+            key={index}
+            title={experience.title}
+            icon={experience.icon}
+            period={experience.period}
+          />
+        ))}
+      </CvSection>
+
+      <CvSection title="Dovednosti">
+        {skills.map((skill, index) => (
+          <ExperienceItem key={index} title={skill} />
+        ))}
+      </CvSection>
+
+      <Footer />
+    </main>
   );
 }
 
