@@ -6,9 +6,26 @@ import ExperienceItem from './components/job/jobItem';
 import SkillList from './components/skills/skillList';
 import Modal from './components/modal/modal';
 import JobModalContent from './components/job/jobModalContent';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+
+const loadData = async () => {
+  const personalInfo = await fetch('http://localhost:3002/personalInfo').then(
+    (response) => response.json()
+  );
+  const jobs = await fetch('http://localhost:3002/jobs').then((response) =>
+    response.json()
+  );
+  const metadata = await fetch('http://localhost:3002/metadata').then(
+    (response) => response.json()
+  );
+  const links = await fetch('http://localhost:3002/links').then((response) =>
+    response.json()
+  );
+
+  return { personalInfo, jobs, metadata, links };
+};
 
 /**
  * Hlavní komponenta aplikace
@@ -16,33 +33,17 @@ import { useEffect, useState } from 'react';
 const CVPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    if (!data) {
-      (async () => {
-        const personalInfo = await fetch(
-          'http://localhost:3002/personalInfo'
-        ).then((response) => response.json());
-        const jobs = await fetch('http://localhost:3002/jobs').then(
-          (response) => response.json()
-        );
-        const metadata = await fetch('http://localhost:3002/metadata').then(
-          (response) => response.json()
-        );
-        const links = await fetch('http://localhost:3002/links').then(
-          (response) => response.json()
-        );
-
-        setData({ personalInfo, jobs, metadata, links });
-        setIsLoading(false);
-      })();
-    }
-  }, []);
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['cvData'],
+    queryFn: loadData,
+  });
 
   if (isLoading) {
     return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error: {error.message}</div>;
   }
 
   if (!data) {
