@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 
 import CVRoute from './App.jsx';
 
@@ -8,10 +8,11 @@ import './index.css';
 import ErrorBoundary from './components/errorBoundary.jsx';
 
 const App = () => (
-  <Router>
+  <Routes>
     <Route path="/" element={<CVRoute />} />
-  </Router>
+  </Routes>
 );
+
 
 const root = document.getElementById('root');
 createRoot(root).render(
