@@ -17,7 +17,9 @@ const root = document.getElementById('root');
 createRoot(root).render(
   <StrictMode>
     <ErrorBoundary>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>
 );
