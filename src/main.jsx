@@ -10,9 +10,10 @@ import ErrorBoundary from './components/errorBoundary.jsx';
 const App = () => (
   <Routes>
     <Route path="/" element={<CVRoute />} />
+    <Route path="/profile" element={<ProfilePage />} />
+    <Route path="*" Component={() => <div>404 Not Found</div>} />
   </Routes>
 );
-
 
 const root = document.getElementById('root');
 createRoot(root).render(

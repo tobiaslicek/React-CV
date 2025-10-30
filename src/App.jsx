@@ -1,24 +1,14 @@
 import './App.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
-// import CvSection from './components/cvSection/cvSection';
-// import ExperienceItem from './components/job/jobItem';
-// import SkillList from './components/skills/skillList';
-// import Modal from './components/modal/modal';
-// import JobModalContent from './components/job/jobModalContent';
+import CvSection from './components/cvSection/cvSection';
+import ExperienceItem from './components/job/jobItem';
+import SkillList from './components/skills/skillList';
+import Modal from './components/modal/modal';
+import JobModalContent from './components/job/jobModalContent';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
-/**
- * Osobní informace
- */
-const personalInfo = {
-  name: 'Šimon Janča',
-  email: 'sjiamnocna@gmail.com',
-  phone: '+420 776 325 381',
-  website: 'www.jancsi.cz',
-  photoSrc:
-    'https://cdn.builder.io/api/v1/image/assets%2Fac51e69ef16e4f8fbc1a1df6a44edf61%2Ff7665f44911a4cbdb8509100ab1f27ad?format=webp&format=webp&width=2000',
-};
+import data from './data/profile.json';
 
 /**
  * Seznam pracovních zkušeností
@@ -97,8 +87,10 @@ const links = [
 /**
  * Hlavní komponenta aplikace
  */
-const CVRoute = () => {
+const CVPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const { personalInfo } = data;
 
   // Get job index from URL parameter
   const jobIndex = searchParams.get('job');
@@ -181,4 +173,4 @@ const CVRoute = () => {
   );
 };
 
-export default CVRoute;
+export default CVPage;
