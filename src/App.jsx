@@ -21,12 +21,23 @@ const CVPage = () => {
 
   useEffect(() => {
     if (!data) {
-      fetch('http://localhost:3002/personalInfo')
-        .then((response) => response.json())
-        .then((data) => {
-          setData(data);
-          setIsLoading(false);
-        });
+      (async () => {
+        const personalInfo = await fetch(
+          'http://localhost:3002/personalInfo'
+        ).then((response) => response.json());
+        const jobs = await fetch('http://localhost:3002/jobs').then(
+          (response) => response.json()
+        );
+        const metadata = await fetch('http://localhost:3002/metadata').then(
+          (response) => response.json()
+        );
+        const links = await fetch('http://localhost:3002/links').then(
+          (response) => response.json()
+        );
+
+        setData({ personalInfo, jobs, metadata, links });
+        setIsLoading(false);
+      })();
     }
   }, []);
 
@@ -113,7 +124,7 @@ const CVPage = () => {
       </CvSection>
 
       <CvSection title="Dovednosti">
-        <SkillList skills={skills} />
+        <SkillList skills={metadata.skills} />
       </CvSection>
 
       <Footer links={links} />

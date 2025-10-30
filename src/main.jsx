@@ -16,6 +16,9 @@ const App = () => (
   </Routes>
 );
 
+/**
+ * Hlavní vstupní bod aplikace, spouštíme React ekosystém a výstup vložíme do elementu s ID "root"
+ */
 const root = document.getElementById('root');
 createRoot(root).render(
   <StrictMode>
