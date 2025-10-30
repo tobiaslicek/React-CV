@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
@@ -30,34 +31,39 @@ const skills = [
   'Git, GitHub, VSCode',
 ];
 
-function App() {
-  return (
-    <main className="cv">
-      <Header
-        name="Tobiáš Licek"
-        contacts="📧 tobiaslicek@seznam.cz | ☎️ +420 732 633 936 | 🌐 www.tobiaslicek.cz"
-      />
+const CVRoute = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-      <CvSection title="Pracovní zkušenosti">
-        {jobs.map((experience, index) => (
-          <ExperienceItem
-            key={index}
-            title={experience.title}
-            icon={experience.icon}
-            period={experience.period}
-          />
-        ))}
-      </CvSection>
+  function App() {
+    return (
+      <main className="cv">
+        <Header
+          name="Tobiáš Licek"
+          contacts="📧 tobiaslicek@seznam.cz | ☎️ +420 732 633 936 | 🌐 www.tobiaslicek.cz"
+        />
 
-      <CvSection title="Dovednosti">
-        {skills.map((skill, index) => (
-          <SkillItem key={index} title={skill} />
-        ))}
-      </CvSection>
+        <CvSection title="Pracovní zkušenosti">
+          {jobs.map((experience, index) => (
+            <ExperienceItem
+              key={index}
+              title={experience.title}
+              icon={experience.icon}
+              period={experience.period}
+            />
+          ))}
+        </CvSection>
 
-      <Footer />
-    </main>
-  );
-}
+        <CvSection title="Dovednosti">
+          {skills.map((skill, index) => (
+            <SkillItem key={index} title={skill} />
+          ))}
+        </CvSection>
+
+        <Footer />
+      </main>
+    );
+  }
+};
 
 export default App;
