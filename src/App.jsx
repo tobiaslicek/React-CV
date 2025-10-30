@@ -9,6 +9,7 @@ import JobModalContent from './components/job/jobModalContent';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 
 import data from './data/profile.json';
+import { useEffect } from 'react';
 
 /**
  * Hlavní komponenta aplikace
@@ -16,9 +17,15 @@ import data from './data/profile.json';
 const CVPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const { personalInfo, jobs, metadata, links } = data;
 
-  const skills = metadata.skills;
+  useEffect(() => {
+    const data = fetch('http://localhost:3002/personalInfo')
+      .then((response) => response.json())
+      .then((data) => {});
+  });
 
   // Get job index from URL parameter
   const jobIndex = searchParams.get('job');
