@@ -16,7 +16,9 @@ import data from './data/profile.json';
 const CVPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { personalInfo, jobs, skills, links } = data;
+  const { personalInfo, jobs, metadata, links } = data;
+
+  const skills = metadata.skills;
 
   // Get job index from URL parameter
   const jobIndex = searchParams.get('job');

@@ -8,6 +8,7 @@
   },
   "jobs": [
     {
+      "id": 1,
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906343.png",
       "title": "Frontend Developer – ABC s.r.o.",
       "period": "2023 / 01 – 2025 / 03",
@@ -27,6 +28,7 @@
       ]
     },
     {
+      "id": 2,
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
       "title": "Web Designer – Freelance",
       "period": "2021 / 05 – 2022 / 12",
@@ -46,23 +48,37 @@
       ]
     }
   ],
-  "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Go",
-    "Node.js",
-    "PHP",
-    "Git",
-    "GitHub",
-    "Gitlab",
-    "VSCode"
-  ],
+  "metadata": {
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Go",
+      "Node.js",
+      "PHP",
+      "Git",
+      "GitHub",
+      "Gitlab",
+      "VSCode"
+    ]
+  },
   "links": [
-    { "label": "GitHub", "url": "https://github.com/sjiamnocna" },
-    { "label": "Gitlab", "url": "https://gitlab.com/sjiamnocna" },
-    { "label": "LinkedIn", "url": "https://linkedin.com/in/sjiamnocna" },
-    { "label": "Portfolio", "url": "https://jancsi.cz" }
+    {
+      "label": "GitHub",
+      "url": "https://github.com/sjiamnocna"
+    },
+    {
+      "label": "Gitlab",
+      "url": "https://gitlab.com/sjiamnocna"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/sjiamnocna"
+    },
+    {
+      "label": "Portfolio",
+      "url": "https://jancsi.cz"
+    }
   ]
 }
