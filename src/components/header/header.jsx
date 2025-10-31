@@ -1,3 +1,5 @@
+import './header.css';
+
 const Header = ({ name, email, phone, website, photoSrc }) => {
   return (
     <header className="cv-header">

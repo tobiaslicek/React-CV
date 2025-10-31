@@ -1,23 +1,10 @@
+import Links from '../links/links';
 import './footer.css';
 
-const Footer = () => {
+const Footer = ({ links }) => {
   return (
     <footer className="cv-footer">
-      <a
-        href="https://github.com/tobiaslicek"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
-      </a>
-      <span className="sep">|</span>
-      <a
-        href="https://www.linkedin.com/in/tobiaslicek"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
+      <Links links={links} />
     </footer>
   );
 };
