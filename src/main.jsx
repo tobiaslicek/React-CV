@@ -1,18 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import ThemeContext from './utils/context/provider.jsx';
 
 import ErrorBoundary from './components/errorBoundary.jsx';
 import CVPage from './App.jsx';
 import ProfilePage from './pages/profile/profile.page.jsx';
 
 import './index.css';
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQueryClient,
-} from '@tanstack/react-query';
-import { ThemeContext } from './utils/context/provider.jsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const App = () => {
   const queryClient = new QueryClient();
