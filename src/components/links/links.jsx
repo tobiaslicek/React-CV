@@ -1,21 +1,21 @@
-import { Fragment } from 'react';
-
 const Links = ({ links }) => {
+  if (!links || links.length === 0) {
+    return null;
+  }
+
   return (
-    <Fragment>
-      {links.map((linkData, i) => {
-        return (
-          <a
-            key={i}
-            href={linkData.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {linkData.label}
-          </a>
-        );
-      })}
-    </Fragment>
+    <>
+      {links.map((linkData, i) => (
+        <a
+          href={linkData.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={i}
+        >
+          {linkData.label}
+        </a>
+      ))}
+    </>
   );
 };
 
