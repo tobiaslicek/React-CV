@@ -1,26 +1,23 @@
 {
   "personalInfo": {
-    "name": "Šimon Janča",
-    "email": "sjiamnocna@gmail.com",
-    "phone": "+420 776 325 381",
-    "website": "www.jancsi.cz",
-    "photoSrc": "https://cdn.builder.io/api/v1/image/assets%2Fac51e69ef16e4f8fbc1a1df6a44edf61%2Ff7665f44911a4cbdb8509100ab1f27ad?format=webp&format=webp&width=2000"
+    "name": "Tobiáš Licek",
+    "email": "tobiaslicek@seznam.cz",
+    "phone": "+420 732 633 936",
+    "website": "www.linkedin.com/in/tobiaslicek",
+    "photoSrc": "https://media.licdn.com/dms/image/v2/D4E03AQGbA_ZzMi6luQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1675333460206?e=1763596800&v=beta&t=L0qxe3xJZYajtz9IWQT47ZHDtyjejWPejHgUzBimmZs"
   },
   "jobs": [
     {
       "id": 1,
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906343.png",
-      "title": "Frontend Developer – ABC s.r.o.",
-      "period": "2023 / 01 – 2025 / 03",
-      "description": "Na této pozici jsem se podílel na vývoji webových aplikací a mobilních aplikací a kopal kanály a nasazoval jsem na ně víka.",
+      "title": "Frontend Developer",
+      "period": "2024 / 05 – present",
+      "description": "Frontend and Drupal Web Developer; specializing in Drupal, SCSS, JavaScript, Twig,..",
       "skills": [
         "HTML",
         "CSS",
         "JavaScript",
-        "React",
-        "Go",
-        "Node.js",
-        "PHP",
+        "Drupal",
         "Git",
         "GitHub",
         "Gitlab",
@@ -30,17 +27,33 @@
     {
       "id": 2,
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
-      "title": "Web Designer – Freelance",
-      "period": "2021 / 05 – 2022 / 12",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Frontend Developer",
+      "period": "2024 / 02 – 2024 / 06",
+      "description": "Frontend and Drupal Web Developer; specializing in Drupal, SCSS, JavaScript, Twig,..",
       "skills": [
         "HTML",
         "CSS",
         "JavaScript",
-        "React",
-        "Go",
-        "Node.js",
+        "Drupal",
+        "Git",
+        "GitHub",
+        "Gitlab",
+        "VSCode"
+      ]
+    },
+    {
+      "id": 3,
+      "icon": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+      "title": "Junior Full-stack Developer",
+      "period": "2023 / 09 – 2023 / 12",
+      "description": "Full Stack Programmer and Tester; specializing in PHP, Nette, Latte, MySQL, Bootstrap, JavaScript, CSS and HTML",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
         "PHP",
+        "Nette",
+        "MySQL",
         "Git",
         "GitHub",
         "Gitlab",
@@ -54,9 +67,7 @@
       "CSS",
       "JavaScript",
       "React",
-      "Go",
-      "Node.js",
-      "PHP",
+      "Drupal",
       "Git",
       "GitHub",
       "Gitlab",
@@ -66,19 +77,11 @@
   "links": [
     {
       "label": "GitHub",
-      "url": "https://github.com/sjiamnocna"
-    },
-    {
-      "label": "Gitlab",
-      "url": "https://gitlab.com/sjiamnocna"
+      "url": "https://github.com/tobiaslicek"
     },
     {
       "label": "LinkedIn",
-      "url": "https://linkedin.com/in/sjiamnocna"
-    },
-    {
-      "label": "Portfolio",
-      "url": "https://jancsi.cz"
+      "url": "www.linkedin.com/in/tobiaslicek"
     }
   ]
 }
