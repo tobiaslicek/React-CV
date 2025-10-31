@@ -9,6 +9,8 @@ import JobModalContent from './components/job/jobModalContent';
 import { useSearchParams } from 'react-router-dom';
 
 import { useQuery } from '@tanstack/react-query';
+import { ThemeContext } from './utils/context/provider';
+import { useContext } from 'react';
 
 const loadData = async () => {
   const personalInfo = await fetch('http://localhost:3002/personalInfo').then(
@@ -32,6 +34,8 @@ const loadData = async () => {
  */
 const CVPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const { theme } = useContext(ThemeContext);
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['cvData'],
@@ -102,7 +106,12 @@ const CVPage = () => {
   };
 
   return (
-    <main className="cv">
+    <main
+      className="cv"
+      style={{
+        background: theme === 'light' ? 'whitesmoke' : 'black',
+      }}
+    >
       <ModalContent />
       <Header
         name={personalInfo.name}
