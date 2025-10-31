@@ -1,18 +1,13 @@
-import "./header.css"
-
-const Header = ({ name, contacts }) => {
+const Header = ({ name, email, phone, website, photoSrc }) => {
   return (
     <header className="cv-header">
-      <h1 className="cv-name">{name || 'Tobiáš Licek'}</h1>
-      <p className="cv-contact">
-        {contacts ||
-          '📧 tobiaslicek@seznam.cz | ☎️ +420 732 633 936 | 🌐 www.tobiaslicek.cz'}
-      </p>
-      <img
-        className="cv-photo"
-        src="images/profile.jpeg"
-        alt="Profilová fotka"
-      />
+      <div>
+        <h1 className="cv-name">{name}</h1>
+        <p className="cv-contact">
+          📧 {email} | ☎️ {phone} | 🌐 {website}
+        </p>
+      </div>
+      <img className="cv-photo" src={photoSrc} alt="Profilová fotka" />
     </header>
   );
 };
