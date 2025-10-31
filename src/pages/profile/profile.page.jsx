@@ -1,7 +1,7 @@
 const ProfilePage = () => (
   <main>
     <img
-      src="https://cdn.builder.io/api/v1/image/assets%2Fac51e69ef16e4f8fbc1a1df6a44edf61%2Ff7665f44911a4cbdb8509100ab1f27ad?format=webp&format=webp&width=2000"
+      src="https://media.licdn.com/dms/image/v2/D4E03AQGbA_ZzMi6luQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1675333460206?e=1763596800&v=beta&t=L0qxe3xJZYajtz9IWQT47ZHDtyjejWPejHgUzBimmZs"
       alt="Profile"
     />
   </main>
