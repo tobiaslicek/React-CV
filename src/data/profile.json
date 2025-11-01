@@ -3,7 +3,7 @@
     "name": "Tobiáš Licek",
     "email": "tobiaslicek@seznam.cz",
     "phone": "+420 732 633 936",
-    "website": "www.linkedin.com/in/tobiaslicek",
+    "website": "https://www.linkedin.com/in/tobiaslicek",
     "photoSrc": "https://media.licdn.com/dms/image/v2/D4E03AQGbA_ZzMi6luQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1675333460206?e=1763596800&v=beta&t=L0qxe3xJZYajtz9IWQT47ZHDtyjejWPejHgUzBimmZs"
   },
   "jobs": [
@@ -12,7 +12,7 @@
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906343.png",
       "title": "Frontend Developer",
       "period": "2024 / 05 – present",
-      "description": "Frontend and Drupal Web Developer; specializing in Drupal, SCSS, JavaScript, Twig,..",
+      "description": "Frontend a Drupal Web Developer se zaměřením na Drupal, SCSS, JavaScript, Twig,..",
       "skills": [
         "HTML",
         "CSS",
@@ -29,7 +29,7 @@
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
       "title": "Frontend Developer",
       "period": "2024 / 02 – 2024 / 06",
-      "description": "Frontend and Drupal Web Developer; specializing in Drupal, SCSS, JavaScript, Twig,..",
+      "description": "Frontend a Drupal Web Developer se zaměřením na Drupal, SCSS, JavaScript, Twig,..",
       "skills": [
         "HTML",
         "CSS",
@@ -46,7 +46,7 @@
       "icon": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
       "title": "Junior Full-stack Developer",
       "period": "2023 / 09 – 2023 / 12",
-      "description": "Full Stack Programmer and Tester; specializing in PHP, Nette, Latte, MySQL, Bootstrap, JavaScript, CSS and HTML",
+      "description": "Junior Full Stack programátor a tester se zaměřením na PHP, Nette, Latte, MySQL, Bootstrap, JavaScript, CSS a HTML",
       "skills": [
         "HTML",
         "CSS",
@@ -81,7 +81,7 @@
     },
     {
       "label": "LinkedIn",
-      "url": "www.linkedin.com/in/tobiaslicek"
+      "url": "https://www.linkedin.com/in/tobiaslicek"
     }
   ]
 }
