@@ -2,28 +2,32 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import ThemeContext from './utils/context/provider.jsx';
+import ThemeContextProvider from './utils/context/themeProvider.comp.jsx';
 
 import ErrorBoundary from './components/errorBoundary.jsx';
 import CVPage from './App.jsx';
 import ProfilePage from './pages/profile/profile.page.jsx';
 
-import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AppDataProvider from './utils/context/appDataProvider.comp.jsx';
+
+import './index.css';
 
 const App = () => {
   const queryClient = new QueryClient();
 
   return (
-    <ThemeContext>
+    <ThemeContextProvider>
       <QueryClientProvider client={queryClient}>
-        <Routes>
-          <Route path="/" element={<CVPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="*" Component={() => <div>404 Not Found</div>} />
-        </Routes>
+        <AppDataProvider>
+          <Routes>
+            <Route path="/" element={<CVPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="*" Component={() => <div>404 Not Found</div>} />
+          </Routes>
+        </AppDataProvider>
       </QueryClientProvider>
-    </ThemeContext>
+    </ThemeContextProvider>
   );
 };
 
@@ -40,3 +44,5 @@ createRoot(root).render(
     </ErrorBoundary>
   </StrictMode>
 );
+
+export default App;

@@ -1,0 +1,22 @@
+.profile-page {
+  padding: 24px;
+}
+.profile-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.profile-content h2 {
+  margin: 0 0 8px 0;
+}
+.profile-desc {
+  margin: 0;
+  color: #333;
+  max-width: 60ch;
+}

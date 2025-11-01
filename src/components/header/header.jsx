@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './header.css';
 
 const Header = ({ name, email, phone, website, photoSrc }) => {
@@ -9,7 +10,9 @@ const Header = ({ name, email, phone, website, photoSrc }) => {
           📧 {email} | ☎️ {phone} | 🌐 {website}
         </p>
       </div>
-      <img className="cv-photo" src={photoSrc} alt="Profilová fotka" />
+      <NavLink to="/profile">
+        <img className="cv-photo" src={photoSrc} alt="Profilová fotka" />
+      </NavLink>
     </header>
   );
 };
