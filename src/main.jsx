@@ -1,23 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import ErrorBoundary from './components/errorBoundary.jsx';
-import CVPage from './App.jsx';
-import ProfilePage from './pages/profile/profile.page.jsx';
-
-import './index.css';
+import App from './App.jsx';
 import WithProviders from './utils/withProviders.jsx';
-
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<CVPage />} />
-      <Route path="/profile" element={<ProfilePage />} />
-      <Route path="*" Component={() => <div>404 Not Found</div>} />
-    </Routes>
-  );
-};
 
 /**
  * Hlavní vstupní bod aplikace, spouštíme React ekosystém a výstup vložíme do elementu s ID "root"

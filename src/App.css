@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+#root {
+  width: 100%;  
+  min-height: 100vh;
+}
+
 .cv {
   width: 80%;
   max-width: 800px;
@@ -14,5 +19,4 @@ body {
   padding: 40px;
   background: #fff;
   border: 1px solid #ddd;
-  filter: grayscale(100%); /* celý layout grayscale */
 }

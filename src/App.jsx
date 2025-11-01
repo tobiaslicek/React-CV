@@ -1,117 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import CVPage from './pages/cv/cv.page';
+import ProfilePage from './pages/profile/profile.page';
+
+import './index.css';
 import './App.css';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import CvSection from './components/cvSection/cvSection';
-import ExperienceItem from './components/job/jobItem';
-import SkillList from './components/skills/skillList';
-import Modal from './components/modal/modal';
-import JobModalContent from './components/job/jobModalContent';
-import { useSearchParams } from 'react-router-dom';
 
-import ThemeContext from './utils/context/themeContext';
-import { useContext } from 'react';
-import AppDataContext from './utils/context/appDataContext';
-
-/**
- * Hlavní komponenta aplikace
- */
-const CVPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const { theme } = useContext(ThemeContext);
-
-  const { appData } = useContext(AppDataContext);
-
-  if (!appData) {
-    return <div>No data available</div>;
-  }
-
-  const { personalInfo, jobs, metadata, links } = appData;
-
-  // Get job index from URL parameter
-  const jobIndex = searchParams.get('job');
-  const jobModalContentIndex = jobIndex ? parseInt(jobIndex, 10) : undefined;
-
-  // Function to close modal by removing URL parameter
-  const closeModal = () => {
-    setSearchParams({});
-  };
-
-  const ModalContent = () => {
-    if (
-      jobModalContentIndex !== undefined &&
-      jobModalContentIndex >= 0 &&
-      jobModalContentIndex < jobs.length
-    ) {
-      // Get current job from jobs array
-      const currentJob = jobs[jobModalContentIndex];
-
-      // Create modal header
-      const ModalHeader = () => (
-        <ExperienceItem
-          key={currentJob.title}
-          title={currentJob.title}
-          icon={currentJob.icon}
-          period={currentJob.period}
-          onClick={() =>
-            setSearchParams({ job: jobModalContentIndex.toString() })
-          }
-        />
-      );
-
-      // Create modal content
-      const ModalContent = () => (
-        <JobModalContent
-          skills={currentJob.skills}
-          description={currentJob.description}
-        />
-      );
-
-      // Return modal
-      return (
-        <Modal title={<ModalHeader />} onClose={closeModal}>
-          <ModalContent />
-        </Modal>
-      );
-    }
-    return null;
-  };
-
+const App = () => {
   return (
-    <main
-      className="cv"
-      style={{
-        background: theme === 'light' ? 'whitesmoke' : 'black',
-      }}
-    >
-      <ModalContent />
-      <Header
-        name={personalInfo.name}
-        email={personalInfo.email}
-        phone={personalInfo.phone}
-        website={personalInfo.website}
-        photoSrc={personalInfo.photoSrc}
-      />
-
-      <CvSection title="Pracovní zkušenosti">
-        {jobs.map((experience, index) => (
-          <ExperienceItem
-            key={experience.title}
-            title={experience.title}
-            icon={experience.icon}
-            period={experience.period}
-            onClick={() => setSearchParams({ job: index.toString() })}
-          />
-        ))}
-      </CvSection>
-
-      <CvSection title="Dovednosti">
-        <SkillList skills={metadata.skills} />
-      </CvSection>
-
-      <Footer links={links} />
-    </main>
+    <Routes>
+      <Route path="/" element={<CVPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="*" Component={() => <div>404 Not Found</div>} />
+    </Routes>
   );
 };
 
-export default CVPage;
+export default App;
