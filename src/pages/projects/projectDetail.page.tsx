@@ -7,25 +7,22 @@ const ProjectDetailPage = () => {
 
   const { appData } = useContext(AppDataContext);
 
-  if (typeof projects != 'object') {
+  if (!appData || typeof appData != 'object') {
     return 'No project data found';
   }
 
-  const { projects } = appData;
-
-  if (!projects || !Array.isArray(projects)) {
+  if (!appData.projects || typeof appData.projects != 'object') {
     return 'No project data found';
   }
 
-  /* 
+  const currentProjectIndex = parseInt(projectID);
+  const currentProject = appData.projects[currentProjectIndex];
 
-    const project = projects.find((p) => p.id === parseInt(projectID));
+  if (!currentProject) {
+    return 'Project not found';
+  }
 
-    if (!project) {
-        return "Project not found";
-    } */
-
-  return <div>Project Detail Page: {projectID}</div>;
+  return <div>Project Detail Page: {currentProject.title}</div>;
 };
 
 export default ProjectDetailPage;

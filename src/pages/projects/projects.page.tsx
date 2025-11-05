@@ -1,13 +1,17 @@
 import { useContext } from 'react';
 import AppDataContext from '../../utils/context/appDataContext';
+import { NavLink } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const { appData } = useContext(AppDataContext);
 
-  if (typeof projects != 'object') {
+  if (!appData || typeof appData != 'object') {
     return 'No project data found';
   }
-  const { projects } = appData;
+
+  if (!appData.projects || typeof appData.projects != 'object') {
+    return 'No project data found';
+  }
 
   /**
      * {
@@ -22,8 +26,10 @@ const ProjectsPage = () => {
 
   return (
     <main className="projects-page">
-      {projects.map((project) => (
-        <li>{project.title}</li>
+      {appData.projects.map((project) => (
+        <NavLink to={`/project/${project.id}`}>
+          <li>{project.title}</li>
+        </NavLink>
       ))}
     </main>
   );
