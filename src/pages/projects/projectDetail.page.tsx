@@ -3,21 +3,20 @@ import { useParams } from 'react-router-dom';
 import AppDataContext from '../../utils/context/appDataContext';
 
 const ProjectDetailPage = () => {
-  const { projectID } = useParams();
-
+  const { projectID } = useParams<{ projectID: string }>();
   const { appData } = useContext(AppDataContext);
 
-  if (!appData || typeof appData != 'object') {
+  if (!appData || !Array.isArray(appData.projects)) {
     return 'No project data found';
   }
 
-  if (!appData.projects || typeof appData.projects != 'object') {
-    return 'No project data found';
+  const id = Number(projectID);
+  if (!Number.isFinite(id)) {
+    return 'Invalid project id';
   }
 
-  const currentProjectIndex = parseInt(projectID);
-  const currentProject = appData.projects[currentProjectIndex];
-
+  // Bezpečněji podle skutečného ID, ne indexu v poli
+  const currentProject = appData.projects.find((p) => p.id === id);
   if (!currentProject) {
     return 'Project not found';
   }
