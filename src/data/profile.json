@@ -61,6 +61,32 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Todo App",
+      "img": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80&auto=format&fit=crop",
+      "tags": ["React", "Vite", "CSS"],
+      "description": "Jednoduchá aplikace pro správu úkolů s ukládáním do localStorage.",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Site",
+      "img": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "description": "Responzivní portfolio představení mých projektů a kontaktů.",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "img": "https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800&q=80&auto=format&fit=crop",
+      "tags": ["React", "API", "Node.js"],
+      "description": "Dashboard ukazující počasí z veřejného API s ukládáním oblíbených měst.",
+      "url": "#"
+    }
+  ],
   "metadata": {
     "skills": [
       "HTML",
